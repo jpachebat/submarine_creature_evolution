@@ -26,9 +26,9 @@ Vec2d Vec2d::operator-(Vec2d& other){
 Vec2d::Vec2d() : Vec2d(0.0, 0.0) {}
 
 double Vec2d::get_norm(){
-    return sqrt(x_^2 + y_^2);
+    return sqrt(x_*x_ + y_*y_);
 }
 
-double Vec2d::distance(const Vec2d& other){
-    return norm(*this - other);
+double Vec2d::distance(Vec2d& other){
+    return (*this - other).get_norm();
 }

@@ -16,7 +16,7 @@ class Vec2d{
 
     double get_norm();
 
-    double distance(const Vec2d& other);
+    double distance(Vec2d& other);
 
     double get_x();
 
