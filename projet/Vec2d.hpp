@@ -8,19 +8,23 @@ class Vec2d{
 
     Vec2d(const Vec2d& other) = default;
 
-    Vec2d operator+(const Vec2d& x);
+    Vec2d operator+(const Vec2d& x) const;
 
-    Vec2d operator*(const double& a);
+    Vec2d operator*(const double& a) const;
 
-    Vec2d operator-(Vec2d& other);
+    Vec2d operator-(const Vec2d& other) const;
 
-    double get_norm();
+    Vec2d operator/(const double& a) const;
 
-    double distance(Vec2d& other);
+    double get_norm() const;
 
-    double get_x();
+    double distance(const Vec2d& other) const;
 
-    double get_y();
+    Vec2d normalize_direction(const Vec2d& other) const;
+
+    double get_x() const;
+
+    double get_y() const;
 
     private:
     double x_,y_;
