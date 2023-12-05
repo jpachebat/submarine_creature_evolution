@@ -17,5 +17,7 @@ class Node{
     Vec2d speed_;
 
     void set_position(Vec2d new_position);
+
+    Vec2d find_force();
     
 };
